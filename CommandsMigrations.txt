@@ -1,0 +1,18 @@
+- Add-Migration Inicial -> Sem Alteração(Classe Original)
+- Add-Migration Unidade -> Com Alteração(Classe Modificada)
+-----------------------------------------------------------
+Migration_Inicial -> Comenta o Up(Versão Acima)
+
+- Update-Database Inicial -> Apenas a versão Up(Comentada)
+
+-----------------------------------------------------------
+*Após isso descomenta, Para (Não fingir mas), e roda novamente, pois a versão Inicial
+já esta registrada no Banco de dados*
+-----------------------------------------------------------
+
+- Update-Database -> (Sem nenhum Argumento), Assim ele faz as alterações completas registrando!
+-----------------------------------------------------------
+- Get-Help EntityFramework
+- Add-Migration (Name) -> Add Migrations
+- Script-Migration (Gera Script)
+
