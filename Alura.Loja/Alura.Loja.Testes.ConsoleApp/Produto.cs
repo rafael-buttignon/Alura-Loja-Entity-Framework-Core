@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using Alura.Loja.Testes.ConsoleApp.Alura.Loja.Testes.ConsoleApp;
 using System.Collections.Generic;
 
 namespace Alura.Loja.Testes.ConsoleApp
@@ -14,7 +14,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         public override string ToString()
         {
-            return $"Produto: {this.Id}, {this.Nome}, {this.Categoria}, {this.PrecoUnitario}" ;
+            return $"Produto: {this.Id}, {this.Nome}, {this.Categoria}, {this.PrecoUnitario}";
         }
     }
 }

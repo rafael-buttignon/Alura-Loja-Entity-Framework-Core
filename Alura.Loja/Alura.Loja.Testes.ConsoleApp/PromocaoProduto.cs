@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Alura.Loja.Testes.ConsoleApp
 {
-    public class PromocaoProduto
+    namespace Alura.Loja.Testes.ConsoleApp
     {
-        public int ProdutoId { get; set; }
-        public int PromocaoId { get; set; }
-        public Produto Produto { get; set; }
-        public Promocao Promocao { get; set; }
+        public class PromocaoProduto
+        {
+            public int ProdutoId { get; set; }
+            public int PromocaoId { get; set; }
+            public Produto Produto { get; set; }
+            public Promocao Promocao { get; set; }
+        }
     }
+
 }

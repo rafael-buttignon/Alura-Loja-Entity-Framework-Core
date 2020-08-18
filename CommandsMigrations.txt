@@ -1,4 +1,4 @@
-Caso for uma "model nova (tabela)" adicionar o DBSet<> no Contexto
+Caso for uma "model nova (tabela)" e necessario adicionar o DBSet<> no Contexto
 -----------------------------------------------------------
 - Add-Migration Inicial -> Sem Alteração(Classe Original)
 - Add-Migration Unidade -> Com Alteração(Classe Modificada)

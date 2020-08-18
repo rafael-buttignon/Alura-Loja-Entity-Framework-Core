@@ -169,24 +169,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
     <Compile Include="Compra.cs" />
+    <Compile Include="Endereco.cs" />
     <Compile Include="IProdutoDAO.cs" />
     <Compile Include="LojaContext.cs" />
-    <Compile Include="Migrations\20200815170218_Inicial.cs" />
-    <Compile Include="Migrations\20200815170218_Inicial.designer.cs">
-      <DependentUpon>20200815170218_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\20200818022456_First.cs" />
+    <Compile Include="Migrations\20200818022456_First.designer.cs">
+      <DependentUpon>20200818022456_First.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200815170317_Unidade.cs" />
-    <Compile Include="Migrations\20200815170317_Unidade.designer.cs">
-      <DependentUpon>20200815170317_Unidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20200817192312_Compra.cs" />
-    <Compile Include="Migrations\20200817192312_Compra.designer.cs">
-      <DependentUpon>20200817192312_Compra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20200817210852_Promocao.cs" />
-    <Compile Include="Migrations\20200817210852_Promocao.designer.cs">
-      <DependentUpon>20200817210852_Promocao.cs</DependentUpon>
+    <Compile Include="Migrations\20200818184630_Cliente.cs" />
+    <Compile Include="Migrations\20200818184630_Cliente.designer.cs">
+      <DependentUpon>20200818184630_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LojaContextModelSnapshot.cs" />
     <Compile Include="Produto.cs" />

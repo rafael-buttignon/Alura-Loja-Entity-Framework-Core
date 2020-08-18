@@ -8,14 +8,27 @@ using Alura.Loja.Testes.ConsoleApp;
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
     [DbContext(typeof(LojaContext))]
-    [Migration("20200817192312_Compra")]
-    partial class Compra
+    [Migration("20200818022456_First")]
+    partial class First
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Alura.Loja.Testes.ConsoleApp.PromocaoProduto", b =>
+                {
+                    b.Property<int>("PromocaoId");
+
+                    b.Property<int>("ProdutoId");
+
+                    b.HasKey("PromocaoId", "ProdutoId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("PromocaoProdutos");
+                });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Compra", b =>
                 {
@@ -51,6 +64,35 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Promocao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("DataInicio");
+
+                    b.Property<DateTime>("DataTermino");
+
+                    b.Property<string>("Descricao");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Promocoes");
+                });
+
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Alura.Loja.Testes.ConsoleApp.PromocaoProduto", b =>
+                {
+                    b.HasOne("Alura.Loja.Testes.ConsoleApp.Produto", "Produto")
+                        .WithMany("Promocoes")
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Alura.Loja.Testes.ConsoleApp.Promocao", "Promocao")
+                        .WithMany("Produtos")
+                        .HasForeignKey("PromocaoId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Compra", b =>
